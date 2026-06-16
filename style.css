@@ -24,6 +24,9 @@ ody{
 }
 main{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .cabecalho-link{
     color:rgb(159, 208, 241);
@@ -39,8 +42,15 @@ footer{
 }
 .cartao-interno{
     position: relative;
+    transition: transform 0.8;
+    transform-style: preserve-3d;
 }
 .cartao-frente, .cartao-verso{
     position: absolute;
     border-radius: 12px;
+    box-shadow: 0 6px 12px rgb(36, 24, 33);
+    backface-visibility: hidden;
+}
+.cartao-verso{
+    transform: rotateY(180deg);
 }
